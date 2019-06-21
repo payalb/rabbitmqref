@@ -3,4 +3,12 @@ All resources can be accessed and used across nodes.
 
 Creating user in node 1, new user would be mirrored in all nodes. So u can connect user to any of 3 nodes.
 If we create a virtua host in any of 3 nodes, it will be available in all the 3 nodes.
-Queues are transparent, we can create queue and connect and publish and consume messages from any of these nodes. Rabbitmq will reroute the request to the node where queue actually exist
+
+Queues are transparent, we can create queue and connect and publish and consume messages from any of these nodes.
+Rabbitmq will reroute the request to the node where queue actually exist
+
+Creating a user in any node, makes it available on all nodes. You can create vhost and add user there and set permissions for that user. 
+Then can login to any host using those credentials.
+
+If we send messages to queue on master node we can consume messages from any node. But queue where node resides should be up and running and  shoudl be in teh same cluster
+We can create queue on any node, but it would be visible first where you declare it.
