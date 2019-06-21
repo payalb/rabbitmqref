@@ -15,3 +15,5 @@ rabbitmqctl join_cluster rabbit@masternode --ram //to join it as a ram node
 rabbitmqctl start_app
 
 rabbitmqctl change_cluster_node_type ram//to change node type
+
+rabbitmq-plugins enable rabbitmq_management
