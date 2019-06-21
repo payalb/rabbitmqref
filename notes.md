@@ -34,4 +34,4 @@ Edit the following file /etc/hosts and make the following entry there:
 127.0.0.1 rabbitmqnode1
 "Public/Private IP of your new RabbitMQ server" rabbitmqnode2
 You’ve now set a hostname for your RabbitMQ server and told it which is the other node in the cluster you’re about to setup.
-View the content in the Erlang cookie file which can be found at /var/lib/rabbitmq/ using
+View the content in the Erlang cookie file which can be found at /var/lib/rabbitmq/ 
