@@ -17,3 +17,6 @@ rabbitmqctl start_app
 rabbitmqctl change_cluster_node_type ram//to change node type
 
 rabbitmq-plugins enable rabbitmq_management
+
+command to copy .erlang.cookie without spaces to C:/Windows
+findstr . .erlang.cookie > C:/Windows/.erlang.cookie
