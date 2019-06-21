@@ -1,0 +1,6 @@
+All resources can be accessed and used across nodes.
+
+
+Creating user in node 1, new user would be mirrored in all nodes. So u can connect user to any of 3 nodes.
+If we create a virtua host in any of 3 nodes, it will be available in all the 3 nodes.
+Queues are transparent, we can create queue and connect and publish and consume messages from any of these nodes. Rabbitmq will reroute the request to the node where queue actually exist
