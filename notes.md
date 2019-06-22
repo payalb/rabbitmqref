@@ -35,3 +35,22 @@ Edit the following file /etc/hosts and make the following entry there:
 "Public/Private IP of your new RabbitMQ server" rabbitmqnode2
 You’ve now set a hostname for your RabbitMQ server and told it which is the other node in the cluster you’re about to setup.
 View the content in the Erlang cookie file which can be found at /var/lib/rabbitmq/ 
+
+
+To be able to access management console from outside localhost, add this to /etc/rabbitmq/rabbitmq.config file:
+[
+{rabbit,
+  [
+
+   {tcp_listeners, [5672]},
+   {loopback_users, []},
+
+   {num_tcp_acceptors, 100}
+   ]
+
+   }
+].
+
+Add to ~/.bashrc
+RABBITMQ_CONFIG_FILE=/etc/rabbitmq/rabbitmq.config
+export RABBITMQ_CONFIG_FILE
