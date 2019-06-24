@@ -1,0 +1,21 @@
+[
+{rabbit, [
+  {loopback_users, []}
+]},
+{rabbitmq_shovel,
+    [ {shovels, [{test_shovel,
+      [{sources,
+        [{brokers, ["amqp://guest:guest@54.191.35.214:5672/%2F"]}]},
+       {destinations,
+        [{broker, "amqp://guest:guest@54.218.29.52:5672/%2F"}]},
+       {queue, <<"shovel.queue.static">>},
+       {publish_fields, [ {exchange, <<"shovel.test.exchange">>},
+                          {routing_key, <<"shovel.destination.queue">>}
+                                           ]},
+       {ack_mode, on_confirm},
+       {reconnect_delay, 5}
+      ]}
+     ]
+   }]
+        }
+].
